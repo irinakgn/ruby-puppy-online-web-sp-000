@@ -1,7 +1,7 @@
 class Dog
   def initialize(name)
        @name = name
-       @@all = [Dow.new('Pluto'),Dow.new('Fido'),Dow.new('Maddy')]
+       @@all = []
     end
 
 
