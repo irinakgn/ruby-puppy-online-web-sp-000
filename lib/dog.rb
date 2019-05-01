@@ -1,19 +1,18 @@
 class Dog
   def initialize(name)
        @name = name
-       @@all = []
-    end
-
-
-  def all()
-    puts  @@all.push(name).join('\n')
-  end
-
-  def clear_all
-    @@all = []
+       @@all = [] if @@all.nil?
+       @@all << self
   end
 
   def name
     @name
+  end
+
+  def self.clear_all
+    @@all.empty
+  end
+  def self.all
+    @@all.each{ |dog| puts dog }
   end
 end
